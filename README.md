@@ -126,7 +126,7 @@ def addProduct():
     new_product = {
         'name': request.json['name'],
         'price': request.json['price'],
-        'quantity': 10
+        'quantity': request.json['quantity']
     }
     products.append(new_product)
     return jsonify({'products': products})
